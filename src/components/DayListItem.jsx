@@ -4,6 +4,9 @@ import classNames from "classnames";
 
 export default function DayListItem(props) {
   // const handleClick = () => setDay(); 
+  // const {setDay, name} = props;
+  console.log(props);
+  
   const dayClass = classNames("day-list__item", {
     "day-list__item--selected": props.selected,
     "day-list__item--full": !props.spots
