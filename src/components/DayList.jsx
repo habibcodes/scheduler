@@ -9,7 +9,8 @@ const parsedDay = props.days.map(day =>
   <DayListItem 
     key={day.id} 
     selected={props.day === day.name} 
-    setDay={props.setDay} 
+    // setDay={props.setDay} 
+    setDay={() => props.setDay(day.id)}
     {...day} 
   />
 );
