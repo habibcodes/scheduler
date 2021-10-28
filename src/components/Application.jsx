@@ -47,7 +47,9 @@ const appointments = [
 
 export default function Application(props) {
   const [day, setDay] = useState("Monday");
+  // for /days API call
   const [days, setDays] = useState([]);
+
   // map appointments
   const parsedAppointments = appointments.map(appointment => <Appointment key={appointment.id} {...appointment} />);
 
@@ -59,6 +61,16 @@ export default function Application(props) {
         setDays([...response.data])
       })
   }, []);
+
+  /* // GET request to /api/appointments
+  useEffect(() => {
+    axios
+      .get('/api/appointments')
+      .then((response) => {
+        console.log(response);
+        setAppointmentsObj([...response.data])
+      })
+  }, []); */
 
 
   return (
