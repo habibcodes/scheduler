@@ -4,6 +4,7 @@ import Show from "./Show";
 import Empty from "./Empty";
 import "components/Appointment/styles.scss";
 
+
 export default function Appointment(props) {
 
   // const textDisplay = () => {
@@ -18,7 +19,7 @@ export default function Appointment(props) {
     <article className="appointment">
       <header>{props.time}</header>
       {/* {textDisplay()} */}
-      {props.interview ? <Show value={props.interview} /> : <Empty />}
+      {props.interview ? <Show student={props.interview} /> : <Empty />}
     </article>
   );
 }
