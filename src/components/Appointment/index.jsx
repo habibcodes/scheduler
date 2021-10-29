@@ -14,6 +14,7 @@ export default function Appointment(props) {
   //     return 'No Appointments';
   //   }
   // }
+  console.log(props);
 
   return (
     <article className="appointment">
