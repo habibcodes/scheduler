@@ -34,33 +34,40 @@ export default function Appointment(props) {
       interviewer      
     };
     transition(SAVING, true);
-    props.bookInterview(props.id, interview)
+    props
+      .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
-      .catch((error) => transition(ERROR_SAVE, true));
+      .catch((error) => {
+        console.error(error);
+        transition(ERROR_SAVE, true)
+      });    
     // shows booked
     // transition(SHOW);
   };
 
-  // edit selected interview
-  function edit(name, interviewer) {
-    const interview = {
-      student: name,
-      interviewer      
-    };
-    transition(SAVING);
-    props.bookInterview(props.id, interview).then(() => transition(EDIT));
-  }
+  // // edit selected interview
+  // function edit(name, interviewer) {
+  //   const interview = {
+  //     student: name,
+  //     interviewer      
+  //   };
+  //   transition(SAVING);
+  //   props.bookInterview(props.id, interview).then(() => transition(EDIT));
+  // }
 
   // deletes existing interview
   function deleteInterview() {
     transition(DELETING, true);
-    props.cancelInterview(props.id)
+    props
+      .cancelInterview(props.id)
       .then(() => transition(EMPTY))
-      .catch((error) => transition(ERROR_DELETE, true));
-      
+      .catch((error) => {
+        console.error(error);
+        transition(ERROR_DELETE, true)
+      });
   };
 
-  console.log(props.interview);
+  // console.log(props.interview);
 
   return (
     <article className="appointment">

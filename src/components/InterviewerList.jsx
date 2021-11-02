@@ -1,5 +1,10 @@
+// import React modules
 import React from "react";
+// props validator
+import PropTypes from 'prop-types';
+// component dependancies
 import InterviewerListItem from "./InterviewerListItem";
+// styling
 import "components/InterviewerList.scss";
 
 export default function InterviewerList(props) {
