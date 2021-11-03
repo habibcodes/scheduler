@@ -8,13 +8,12 @@ import InterviewerListItem from "./InterviewerListItem";
 import "components/InterviewerList.scss";
 
 export default function InterviewerList(props) {
-  // console.log(props); // array + setInt func here
 
+  // create an array from interviewers, pass in props to component
   const parsedInterviewer = props.interviewers.map(interviewer => 
     <InterviewerListItem 
       key={interviewer.id} 
       selected={props.value === interviewer.id} 
-      // setInterviewer={props.setInterviewer}
       setInterviewer={() => props.onChange(interviewer.id)} 
       {...interviewer} 
     />
@@ -27,5 +26,10 @@ export default function InterviewerList(props) {
         {parsedInterviewer}
       </ul>
     </section>
-  );
+  );  
 }
+
+// validate proptype given to InterviewerList
+InterviewerList.propTypes = {
+  interviewers: PropTypes.array.isRequired
+};
