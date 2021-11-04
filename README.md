@@ -17,19 +17,19 @@ A fully built and tested React application that allows users to book and cancel 
 
 ## Creating Appointment
 
-!["creating appointmet"]()
+!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/creating%20appointment.gif)
 
 ## Editing Appointment
 
-!["creating appointmet"]()
+!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/edit%20appointment.gif)
 
 ## Deleting Appointment
 
-!["creating appointmet"]()
+!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/delete%20appointment.gif)
 
 ## Error Handling 
 
-!["creating appointmet"]()
+!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/deleting%20error.gif)
 
 ## Dependencies
   - Axios
