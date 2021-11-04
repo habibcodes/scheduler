@@ -14,26 +14,64 @@ A fully built and tested React application that allows users to book and cancel 
     - get a real-time update of appointment availability
     - click on available spots to add new appointments
     - store and retrieve appointment schedules from the database
-    - 
 
-## Setup
+## Creating Appointment
 
-Install dependencies with `npm install`.
+!["creating appointmet"]()
 
-## Running Webpack Development Server
+## Editing Appointment
 
-```sh
-npm start
-```
+!["creating appointmet"]()
 
-## Running Jest Test Framework
+## Deleting Appointment
 
-```sh
-npm test
-```
+!["creating appointmet"]()
 
-## Running Storybook Visual Testbed
+## Error Handling 
 
-```sh
-npm run storybook
+!["creating appointmet"]()
+
+## Dependencies
+  - Axios
+  - Babel/core
+  - Babel-loader
+  - Classnames
+  - Node-sass
+  - Normalize.css
+  - Prop-types
+  - React
+  - React-dom
+  - React-scripts
+  - React-test-renderer
+  - Storybook/addon-actions
+  - Storybook/addon-backgrounds
+  - Storybook/addon-links
+  - Storybook/addons
+  - Storybook/react
+  - Testing-library/jest-dom
+  - Testing-library/react
+  - Testing-library/react-hooks
+
+## Dev Dependencies
+  - node-sass: ^4.14.0,
+  - prop-types: ^15.7.2,
+  - @babel/core: ^7.4.3,
+  - @testing-library/jest-dom: ^4.0.0,
+  - @storybook/addon-actions: ^5.0.10,
+  - @storybook/addon-backgrounds: ^5.0.10,
+  - @storybook/addon-links: ^5.0.10,
+  - @storybook/addons: ^5.0.10,
+  - @storybook/react: ^5.0.10,
+  - @testing-library/react-hooks: ^7.0.2,
+  - babel-loader: ^8.0.5,
+  - @testing-library/react: ^8.0.7,
+  - react-test-renderer: ^16.14.0
+
+
+
+## Getting Started
+1. Install dependencies with `npm install`.
+2. Get and install server from https://github.com/lighthouse-labs/scheduler-api. 
+3. Run servers using `npm start`. 
+
 ```
