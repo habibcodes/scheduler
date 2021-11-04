@@ -29,17 +29,17 @@ User can create an appointment, with the number of remaining appointment-spots u
 ## Editing Appointment
 User can edit a previously saved appointment and resave it.
 
-!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/edit%20appointment.gif)
+!["editing appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/edit%20appointment.gif)
 
 ## Deleting Appointment
 User can delete an appointment, triggering a confirmation transition with the option to return back to the previous state or confirm deletion. When confirmed, the iterview is deleted from the database, the number of remaining spots increases by one, and the add-appointment button reappears. 
 
-!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/delete%20appointment.gif)
+!["deleting appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/delete%20appointment.gif)
 
 ## Error Handling
 User is presented with an error transition and message in the event that there is an issue with saving or deleting an appointment due to a server side malfunction. 
 
-!["creating appointmet"](https://github.com/habibcodes/scheduler/blob/master/images/deleting%20error.gif)
+!["error handling"](https://github.com/habibcodes/scheduler/blob/master/images/deleting%20error.gif)
 
 ## Technology Stack
   - Front-end:
