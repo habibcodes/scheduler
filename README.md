@@ -94,4 +94,3 @@ User is presented with an error transition and message in the event that there i
 3. Run servers using `npm start`. 
 4. To run tests, `npm start`. 
 
-```
