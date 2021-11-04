@@ -15,6 +15,12 @@ A fully built and tested React application that allows users to book and cancel 
     - click on available spots to add new appointments
     - store and retrieve appointment schedules from the database
 
+## Getting Started
+1. Install dependencies with `npm install`.
+2. Get and install server from https://github.com/lighthouse-labs/scheduler-api. 
+3. Run servers using `npm start`. 
+4. To run tests, `npm start`. 
+
 ## Creating Appointment
 User can create an appointment, with the number of remaining appointment-spots updating dynamically. 
 
@@ -87,10 +93,4 @@ User is presented with an error transition and message in the event that there i
   - @testing-library/react-hooks: ^7.0.2
   - @testing-library/react: ^8.0.7
 
-
-## Getting Started
-1. Install dependencies with `npm install`.
-2. Get and install server from https://github.com/lighthouse-labs/scheduler-api. 
-3. Run servers using `npm start`. 
-4. To run tests, `npm start`. 
 
