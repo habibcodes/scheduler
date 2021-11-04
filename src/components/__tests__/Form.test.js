@@ -7,10 +7,6 @@ import Form from "components/Appointment/Form";
 
 afterEach(cleanup);
 
-// it("renders without crashing", () => {
-//   render(<Application />);
-// });
-
 describe("Form", () => {
   const interviewers = [
     {
@@ -19,21 +15,21 @@ describe("Form", () => {
       avatar: "https://i.imgur.com/LpaY82x.png"
     }
   ];
-
+  // Test renders empty student name field//------------------------------
   it("renders without student name if not provided", () => {
     const {getByPlaceholderText} = render(
       <Form interviewers={interviewers} />
     );
     expect(getByPlaceholderText("Enter Student Name")).toHaveValue("");
   });
-
+  // Test initial student name render //------------------------------
   it("renders with initial student name", () => {
     const { getByTestId } = render(
       <Form interviewers={interviewers} student="Lydia Miller-Jones" />
     );
     expect(getByTestId("student-name-input")).toHaveValue("Lydia Miller-Jones");
   });
-
+  // Test successful save with empty student field //---------------------
   it("can successfully save after trying to submit an empty student name", () => {
     const onSave = jest.fn();
     const { getByText, getByPlaceholderText, queryByText } = render(
@@ -56,7 +52,7 @@ describe("Form", () => {
     expect(onSave).toHaveBeenCalledTimes(1);
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", null);
   });
-
+  // Test submission of entered name //------------------------------
   it("submits the name entered by the user", () => {
     const onSave = jest.fn();
     const { getByText, getByPlaceholderText } = render(
@@ -71,7 +67,7 @@ describe("Form", () => {
     expect(onSave).toHaveBeenCalledTimes(1);
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", null);
   });
-
+  // Test cancel functionality//------------------------------
   it("calls onCancel and resets the input field", () => {
     const onCancel = jest.fn();
     const { getByText, getByPlaceholderText, queryByText } = render(
@@ -97,5 +93,4 @@ describe("Form", () => {
   
     expect(onCancel).toHaveBeenCalledTimes(1);
   });
-
 })

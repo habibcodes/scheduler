@@ -11,6 +11,7 @@ import Appointment from "./Appointment";
 import "components/Application.scss";
 
 export default function Application(props) {
+  // all state data in custom hook is called here----------
   const {
     state,
     setDay,

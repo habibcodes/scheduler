@@ -1,5 +1,7 @@
+// helper functions to run tests
 import { getAppointmentsForDay, getInterviewersForDay, getInterview } from "helpers/selectors";
 
+// Test data //------------------------------
 const state = {
   days: [
     {
@@ -45,7 +47,6 @@ const state = {
 };
 
 // Test getAppointmentsForDay //------------------------------
-
 test("getAppointmentsForDay returns an array", () => {
   const result = getAppointmentsForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);
@@ -73,7 +74,6 @@ test("getAppointmentsForDay returns an empty array when the day is not found", (
 });
 
 // Test getInterviewersForDay //------------------------------
-
 test("getInterviewersForDay returns an array", () => {
   const result = getAppointmentsForDay(state, "Monday");
   expect(Array.isArray(result)).toBe(true);
@@ -100,7 +100,6 @@ test("getInterviewersForDay returns an empty array when the day is not found", (
 });
 
 // Test getInterview //------------------------------
-
 test("getInterview returns an object with the interviewer data", () => {
   const result = getInterview(state, state.appointments["3"].interview);
   expect(result).toEqual(

@@ -1,4 +1,6 @@
+// import React and hooks
 import React, { useState } from "react";
+// component dependencies
 import Button from "components/Button";
 import InterviewerList from "components/InterviewerList";
 
@@ -7,26 +9,28 @@ export default function Form(props) {
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
 
+  // clear setStates
   const reset = () => {
     setStudent("");
     setInterviewer("");
   }
+  // resets setStates when cancel clicked
   const cancel = () => {
     reset();
     props.onCancel();
   }
-
+  // prevent empty input before submission
   function validate() {
     if (student === "") {
       setError("Student name cannot be blank");
       return;
-    } 
+    }
+    // clear any errors and pass props to onSave 
     setError(""); 
     props.onSave(student, interviewer);
   }
   
   return (
-
     <main className="appointment__card appointment__card--create">
       <section className="appointment__card-left">        
         <form autoComplete="off" onSubmit={e => e.preventDefault()}>
@@ -38,7 +42,7 @@ export default function Form(props) {
             value={student}
             onChange={(e) => setStudent(e.target.value)}
             data-testid="student-name-input"
-            />            
+          />            
         </form>
         {/* Displays form validation errors */}
         <section className="appointment__validation">

@@ -1,11 +1,12 @@
+// import react
 import React from "react";
-import "components/DayListItem.scss";
+// component dependencies
 import classNames from "classnames";
+// styling
+import "components/DayListItem.scss";
 
 export default function DayListItem({name, selected, spots, setDay}) {
-  // const handleClick = () => setDay(); 
-  // const {setDay, name} = props;
-   
+  // applies class conditionally if spots remain or not
   const dayClass = classNames("day-list__item", {
     "day-list__item--selected": selected,
     "day-list__item--full": !spots
@@ -19,16 +20,18 @@ export default function DayListItem({name, selected, spots, setDay}) {
     } else {
       return `${spots} spots remaining`
     }
-  }
+  };
 
   return (
-    <li data-testid="day" className={dayClass} onClick={setDay} selected={selected}>
+    <li 
+      data-testid="day" 
+      className={dayClass} 
+      onClick={setDay} 
+      selected={selected}
+    >
       <h2 className="text--regular">{name}</h2>
       <h3 className="text--light">{formatSpots()}</h3>
     </li>
   );
-}
+};
 
-// how shortcircut && works //
-// If(somethingTrue) && returnsThis
-// somethingTrue ? returnThis:somethingTrue;

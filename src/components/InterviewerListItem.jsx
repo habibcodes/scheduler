@@ -1,31 +1,29 @@
+// import React
 import React from "react";
-import "components/InterviewerListItem.scss";
+// component dependencies
 import classNames from "classnames";
-
-// const interviewer = {
-//   id: 1,
-//   name: "Sylvia Palmer",
-//   avatar: "https://i.imgur.com/LpaY82x.png"
-// };
+// styling
+import "components/InterviewerListItem.scss";
 
 export default function InterviewerListItem({name, avatar, selected, setInterviewer}) {
-  // const {id, name, avatar} = props;
-  // console.log(props);
-
-  //put classnames library stuff here conditionals for selected/not selected
+  // conditionally render class for interviewers
   const interviewerItemClass = classNames("interviewers__item", {
     "interviewers__item--selected": selected,
     "interviewers__item--selected-image": selected
   })
-  // click handler for setInterviewer
 
   return (
-    <li className={interviewerItemClass} onClick={setInterviewer}>
+    <li 
+      className={interviewerItemClass} 
+      onClick={setInterviewer}
+    >
+      {/* Renders interviewer img circle */}
       <img
         className="interviewers__item-image"
         src={avatar}
         alt={name}
       />
+      {/* Conditionally render name when selected */}
       {selected && name}
     </li>
   );

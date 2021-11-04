@@ -14,10 +14,8 @@ export function getAppointmentsForDay(state, day) {
 
 // returns an array of interviewers for given day
 export function getInterviewersForDay(state, day) {
-  // console.log(state);
-  // extract day
+  // extract selected day from db
   const getDay = state.days.find(searchDay => searchDay.name === day);
-  // const getInterviewers = state.interviewers.find(searchInterviewers => searchInterviewers.name === interviewers[name]);
   // if there is no data, return empty array
   if(!getDay) {
     return [];

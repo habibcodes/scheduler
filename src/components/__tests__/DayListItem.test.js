@@ -1,11 +1,12 @@
+// import react
 import React from "react";
-
+// helper functions to run tests
 import { render, cleanup } from "@testing-library/react";
-
+// component dependencies
 import DayListItem from "components/DayListItem";
 
 afterEach(cleanup);
-
+// Test DayListItem render and spots counter //------------------------------
 it("renders without crashing", () => {
   render(<DayListItem />);
 });

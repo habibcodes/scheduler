@@ -1,23 +1,23 @@
+// import React
 import React from "react";
+// component dependencies
 import DayListItem from "./DayListItem";
 
 export default function DayList(props) {
-  // console.log(props);
-  // const {setDay} = props;
-
-const parsedDay = props.days.map(day =>
-  <DayListItem 
-    key={day.id} 
-    // selected={props.day === day.name} 
-    selected={day.name === props.value}  
-    setDay={() => props.onChange(day.name)} // should work???
-    {...day} 
-  />
-);
+  // create an array from days and 
+  // pass it to be rendered
+  const parsedDay = props.days.map(day =>
+    <DayListItem 
+      key={day.id} 
+      selected={day.name === props.value}  
+      setDay={() => props.onChange(day.name)}
+      {...day} 
+    />
+  );
 
   return (
     <ul>
-      {/* <DayListItem /> */}
+      {/* Renders list of DayListItems */}
       {parsedDay}
     </ul>
   );

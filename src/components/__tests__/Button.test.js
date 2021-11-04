@@ -1,11 +1,13 @@
+// import React
 import React from "react";
-
+// helper functions to run tests
 import { render, cleanup, fireEvent } from "@testing-library/react";
-
+// import component dependencies
 import Button from "components/Button";
 
 afterEach(cleanup);
 
+// Test button renderings //------------------------------
 it("renders without crashing", () => {
   render(<Button />);
 });
@@ -30,6 +32,7 @@ it("renders a danger button", () => {
   expect(getByText("Danger")).toHaveClass("button--danger");
 });
 
+// Test button clickability //------------------------------
 it("renders a clickable button", () => {
   const handleClick = jest.fn();
   const { getByText } = render(
@@ -43,6 +46,7 @@ it("renders a clickable button", () => {
   expect(handleClick).toHaveBeenCalledTimes(1);
 });
 
+// Test if button disabled //------------------------------
 it("renders a disabled button", () => {
   const handleClick = jest.fn();
   const { getByText } = render(

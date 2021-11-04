@@ -7,17 +7,11 @@ import Appointment from "components/Appointment";
 
 afterEach(cleanup);
 
-// it("renders without crashing", () => {
-//   render(<Application />);
-// });
-
+// Test if Appointment renders//------------------------------
 describe("Appointment", () => {
 
   it("renders without crashing", () => {
     render(<Appointment />);
   });
-
-
-
   
 });

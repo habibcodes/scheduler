@@ -6,14 +6,13 @@
 // appointment slot is now empty post cancel. 
 
 describe("Appointments", () => {
+  // Reset test conditions //------------------------------
   beforeEach(() => {
     cy.request("GET", "/api/debug/reset");
-
     cy.visit("/");
-
     cy.contains("Monday");
   });
- 
+  // Test if able to book interview//------------------------------
   it("should book an interview", () => {
     cy.get("[alt=Add]")
       .first()
@@ -30,7 +29,7 @@ describe("Appointments", () => {
   cy.contains(".appointment__card--show", "Lydia Miller-Jones");
   cy.contains(".appointment__card--show", "Sylvia Palmer");
   });
-
+  // Test if able to edit interview //------------------------------
   it("should edit an interview", () => {
     cy.get("[alt=Edit]")
       .first()
@@ -48,7 +47,7 @@ describe("Appointments", () => {
     cy.contains(".appointment__card--show", "Lydia Miller-Jones");
     cy.contains(".appointment__card--show", "Tori Malcolm");
   });
-
+  // Test if able to cancel interview and delete button //------------------------------
   it("should cancel an interview", () => {
     cy.get("[alt=Delete]")
       .click({ force: true });
@@ -65,4 +64,4 @@ describe("Appointments", () => {
       .should("not.exist");
   })
 
- });
+});

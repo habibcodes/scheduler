@@ -3,10 +3,11 @@
 // to see if the appropriate class is applied
 
 describe("Navigation", () => {
+  // Test render of root page //------------------------------
   it("should visit root", () => {
     cy.visit("/");
   });
-
+  // Test ability to select Tuesday from nav //------------------------------
   it("should navigate to Tuesday", () => {
     cy.visit("/");
     

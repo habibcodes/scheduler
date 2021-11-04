@@ -1,4 +1,4 @@
-// React hooks import
+// import React and hooks
 import React, {useState, useEffect} from "react";
 // Axios API caller import
 import axios from 'axios';
